@@ -1,0 +1,568 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: topmodule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "topmodule.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "topmodule"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : topmodule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "TFF.v" in library work
+Compiling verilog file "taomode.v" in library work
+Module <TFF> compiled
+Compiling verilog file "tao4xung.v" in library work
+Module <taomode> compiled
+Compiling verilog file "Mux41.v" in library work
+Module <tao4xung> compiled
+Compiling verilog file "chonmode.v" in library work
+Module <Mux41> compiled
+Compiling verilog file "topmodule.v" in library work
+Module <chonmode> compiled
+Module <topmodule> compiled
+No errors in compilation
+Analysis of file <"topmodule.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <topmodule> in library <work>.
+
+Analyzing hierarchy for module <tao4xung> in library <work> with parameters.
+	M = "00011101110011010110010100000000"
+	N = "00000000000000000000000000011110"
+
+Analyzing hierarchy for module <Mux41> in library <work>.
+
+Analyzing hierarchy for module <chonmode> in library <work>.
+
+Analyzing hierarchy for module <taomode> in library <work>.
+
+Analyzing hierarchy for module <TFF> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <topmodule>.
+Module <topmodule> is correct for synthesis.
+ 
+Analyzing module <tao4xung> in library <work>.
+	M = 32'sb00011101110011010110010100000000
+	N = 32'sb00000000000000000000000000011110
+Module <tao4xung> is correct for synthesis.
+ 
+Analyzing module <Mux41> in library <work>.
+Module <Mux41> is correct for synthesis.
+ 
+Analyzing module <chonmode> in library <work>.
+Module <chonmode> is correct for synthesis.
+ 
+Analyzing module <taomode> in library <work>.
+Module <taomode> is correct for synthesis.
+ 
+Analyzing module <TFF> in library <work>.
+Module <TFF> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <tao4xung>.
+    Related source file is "tao4xung.v".
+    Found 30-bit comparator less for signal <q_0$cmp_lt0000> created at line 45.
+    Found 30-bit comparator less for signal <q_1$cmp_lt0000> created at line 46.
+    Found 30-bit comparator less for signal <q_2$cmp_lt0000> created at line 47.
+    Found 30-bit comparator less for signal <q_3$cmp_lt0000> created at line 48.
+    Found 30-bit adder for signal <r_next10000H$addsub0000> created at line 44.
+    Found 30-bit adder for signal <r_next1000H$addsub0000> created at line 43.
+    Found 30-bit adder for signal <r_next100H$addsub0000> created at line 42.
+    Found 30-bit adder for signal <r_next10H$addsub0000> created at line 41.
+    Found 30-bit register for signal <r_reg10000H>.
+    Found 30-bit register for signal <r_reg1000H>.
+    Found 30-bit register for signal <r_reg100H>.
+    Found 30-bit register for signal <r_reg10H>.
+    Summary:
+	inferred 120 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <tao4xung> synthesized.
+
+
+Synthesizing Unit <Mux41>.
+    Related source file is "Mux41.v".
+    Found 1-bit 4-to-1 multiplexer for signal <Y>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux41> synthesized.
+
+
+Synthesizing Unit <chonmode>.
+    Related source file is "chonmode.v".
+    Found 4x2-bit ROM for signal <Y>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <chonmode> synthesized.
+
+
+Synthesizing Unit <TFF>.
+    Related source file is "TFF.v".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <TFF> synthesized.
+
+
+Synthesizing Unit <taomode>.
+    Related source file is "taomode.v".
+    Found 8-bit register for signal <r_reg>.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_0$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_1$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_2$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_3$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_4$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_5$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_6$mux0000> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <r_reg_7$mux0000> created at line 39.
+    Found 1-bit adder for signal <temp>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <taomode> synthesized.
+
+
+Synthesizing Unit <topmodule>.
+    Related source file is "topmodule.v".
+Unit <topmodule> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x2-bit ROM                                           : 1
+# Adders/Subtractors                                   : 5
+ 1-bit adder                                           : 1
+ 30-bit adder                                          : 4
+# Registers                                            : 13
+ 1-bit register                                        : 9
+ 30-bit register                                       : 4
+# Comparators                                          : 4
+ 30-bit comparator less                                : 4
+# Multiplexers                                         : 9
+ 1-bit 4-to-1 multiplexer                              : 9
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x2-bit ROM                                           : 1
+# Adders/Subtractors                                   : 5
+ 1-bit adder                                           : 1
+ 30-bit adder                                          : 4
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Comparators                                          : 4
+ 30-bit comparator less                                : 4
+# Multiplexers                                         : 9
+ 1-bit 4-to-1 multiplexer                              : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <topmodule> ...
+
+Optimizing unit <tao4xung> ...
+
+Optimizing unit <taomode> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block topmodule, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : topmodule.ngr
+Top Level Output File Name         : topmodule
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 661
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 127
+#      LUT2                        : 136
+#      LUT3                        : 14
+#      LUT4                        : 51
+#      MUXCY                       : 192
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 120
+# FlipFlops/Latches                : 129
+#      FDC                         : 121
+#      FDCP_1                      : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 5
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      179  out of   4656     3%  
+ Number of Slice Flip Flops:            129  out of   9312     1%  
+ Number of 4 input LUTs:                338  out of   9312     3%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    232     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)  | Load  |
+-------------------------------------------+------------------------+-------+
+clk                                        | BUFGP                  | 120   |
+M0/Madd_temp_lut<0>(M0/Madd_temp_lut<0>1:O)| NONE(*)(M0/F0/Q)       | 1     |
+clk_o(Chonxung/Mmux_Y_2_f5:O)              | NONE(*)(M0/r_reg_0)    | 8     |
+-------------------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------+------------------------+-------+
+Control Signal                           | Buffer(FF name)        | Load  |
+-----------------------------------------+------------------------+-------+
+reset                                    | IBUF                   | 128   |
+N0(XST_GND:G)                            | NONE(M0/r_reg_0)       | 7     |
+M0/r_reg_7_and0000(M0/r_reg_7_and00001:O)| NONE(M0/r_reg_7)       | 1     |
+M0/r_reg_7_and0001(M0/r_reg_7_and00011:O)| NONE(M0/r_reg_7)       | 1     |
+-----------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.314ns (Maximum Frequency: 158.378MHz)
+   Minimum input arrival time before clock: 3.760ns
+   Maximum output required time after clock: 4.532ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.314ns (frequency: 158.378MHz)
+  Total number of paths / destination ports: 5460 / 120
+-------------------------------------------------------------------------
+Delay:               6.314ns (Levels of Logic = 30)
+  Source:            chiaxung/r_reg10000H_2 (FF)
+  Destination:       chiaxung/r_reg10000H_29 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: chiaxung/r_reg10000H_2 to chiaxung/r_reg10000H_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.591   0.706  chiaxung/r_reg10000H_2 (chiaxung/r_reg10000H_2)
+     LUT1:I0->O            1   0.704   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<2>_rt (chiaxung/Madd_r_next10000H_addsub0000_cy<2>_rt)
+     MUXCY:S->O            1   0.464   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<2> (chiaxung/Madd_r_next10000H_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<3> (chiaxung/Madd_r_next10000H_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<4> (chiaxung/Madd_r_next10000H_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<5> (chiaxung/Madd_r_next10000H_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<6> (chiaxung/Madd_r_next10000H_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<7> (chiaxung/Madd_r_next10000H_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<8> (chiaxung/Madd_r_next10000H_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<9> (chiaxung/Madd_r_next10000H_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<10> (chiaxung/Madd_r_next10000H_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<11> (chiaxung/Madd_r_next10000H_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<12> (chiaxung/Madd_r_next10000H_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<13> (chiaxung/Madd_r_next10000H_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<14> (chiaxung/Madd_r_next10000H_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<15> (chiaxung/Madd_r_next10000H_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<16> (chiaxung/Madd_r_next10000H_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<17> (chiaxung/Madd_r_next10000H_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<18> (chiaxung/Madd_r_next10000H_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<19> (chiaxung/Madd_r_next10000H_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<20> (chiaxung/Madd_r_next10000H_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<21> (chiaxung/Madd_r_next10000H_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<22> (chiaxung/Madd_r_next10000H_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<23> (chiaxung/Madd_r_next10000H_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<24> (chiaxung/Madd_r_next10000H_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<25> (chiaxung/Madd_r_next10000H_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<26> (chiaxung/Madd_r_next10000H_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<27> (chiaxung/Madd_r_next10000H_addsub0000_cy<27>)
+     MUXCY:CI->O           0   0.059   0.000  chiaxung/Madd_r_next10000H_addsub0000_cy<28> (chiaxung/Madd_r_next10000H_addsub0000_cy<28>)
+     XORCY:CI->O           1   0.804   0.499  chiaxung/Madd_r_next10000H_addsub0000_xor<29> (chiaxung/r_next10000H_addsub0000<29>)
+     LUT2:I1->O            1   0.704   0.000  chiaxung/r_next10000H<29>1 (chiaxung/r_next10000H<29>)
+     FDC:D                     0.308          chiaxung/r_reg10000H_29
+    ----------------------------------------
+    Total                      6.314ns (5.109ns logic, 1.205ns route)
+                                       (80.9% logic, 19.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M0/Madd_temp_lut<0>'
+  Clock period: 2.843ns (frequency: 351.741MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.843ns (Levels of Logic = 1)
+  Source:            M0/F0/Q (FF)
+  Destination:       M0/F0/Q (FF)
+  Source Clock:      M0/Madd_temp_lut<0> rising
+  Destination Clock: M0/Madd_temp_lut<0> rising
+
+  Data Path: M0/F0/Q to M0/F0/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.591   0.820  M0/F0/Q (M0/F0/Q)
+     INV:I->O              1   0.704   0.420  M0/F0/Q_not00011_INV_0 (M0/F0/Q_not0001)
+     FDC:D                     0.308          M0/F0/Q
+    ----------------------------------------
+    Total                      2.843ns (1.603ns logic, 1.240ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_o'
+  Clock period: 2.672ns (frequency: 374.251MHz)
+  Total number of paths / destination ports: 32 / 8
+-------------------------------------------------------------------------
+Delay:               2.672ns (Levels of Logic = 2)
+  Source:            M0/r_reg_7 (FF)
+  Destination:       M0/r_reg_6 (FF)
+  Source Clock:      clk_o falling
+  Destination Clock: clk_o falling
+
+  Data Path: M0/r_reg_7 to M0/r_reg_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP_1:C->Q           6   0.591   0.748  M0/r_reg_7 (M0/r_reg_7)
+     LUT3:I1->O            1   0.704   0.000  M0/Mmux_r_reg_6_mux00003_F (N23)
+     MUXF5:I0->O           1   0.321   0.000  M0/Mmux_r_reg_6_mux00003 (M0/r_reg_6_mux0000)
+     FDCP_1:D                  0.308          M0/r_reg_6
+    ----------------------------------------
+    Total                      2.672ns (1.924ns logic, 0.748ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              3.760ns (Levels of Logic = 3)
+  Source:            MODE<0> (PAD)
+  Destination:       M0/r_reg_0 (FF)
+  Destination Clock: clk_o falling
+
+  Data Path: MODE<0> to M0/r_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.218   1.209  MODE_0_IBUF (MODE_0_IBUF)
+     LUT3:I0->O            1   0.704   0.000  M0/Mmux_r_reg_7_mux0000_4 (M0/Mmux_r_reg_7_mux0000_4)
+     MUXF5:I0->O           1   0.321   0.000  M0/Mmux_r_reg_7_mux0000_2_f5 (M0/r_reg_7_mux0000)
+     FDCP_1:D                  0.308          M0/r_reg_7
+    ----------------------------------------
+    Total                      3.760ns (2.551ns logic, 1.209ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_o'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.532ns (Levels of Logic = 1)
+  Source:            M0/r_reg_7 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      clk_o falling
+
+  Data Path: M0/r_reg_7 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP_1:C->Q           6   0.591   0.669  M0/r_reg_7 (M0/r_reg_7)
+     OBUF:I->O                 3.272          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.532ns (3.863ns logic, 0.669ns route)
+                                       (85.2% logic, 14.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.25 secs
+ 
+--> 
+
+Total memory usage is 4521956 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

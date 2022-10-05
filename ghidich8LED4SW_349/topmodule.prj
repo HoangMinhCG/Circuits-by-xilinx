@@ -1,0 +1,6 @@
+verilog work "TFF.v"
+verilog work "taomode.v"
+verilog work "tao4xung.v"
+verilog work "Mux41.v"
+verilog work "chonmode.v"
+verilog work "topmodule.v"

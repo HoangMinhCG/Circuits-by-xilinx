@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/ghidichtraiphai_phaitrai_347/TFF.xst" -ofn "D:/dowload/xilin/ghidichtraiphai_phaitrai_347/TFF.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/ghidichtraiphai_phaitrai_347/TFF.xst" -ofn "D:/dowload/xilin/ghidichtraiphai_phaitrai_347/TFF.syr" 

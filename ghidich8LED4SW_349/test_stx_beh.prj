@@ -1,0 +1,8 @@
+verilog isim_temp "TFF.v"
+verilog isim_temp "taomode.v"
+verilog isim_temp "tao4xung.v"
+verilog isim_temp "Mux41.v"
+verilog isim_temp "chonmode.v"
+verilog isim_temp "topmodule.v"
+verilog isim_temp "test.v"
+verilog isim_temp "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

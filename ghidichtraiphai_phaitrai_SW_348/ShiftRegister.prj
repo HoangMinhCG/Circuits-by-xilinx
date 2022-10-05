@@ -1,0 +1,4 @@
+verilog work "TFF.v"
+verilog work "Shift_SIPO.v"
+verilog work "Clock_1KHz.v"
+verilog work "ShiftRegister.v"

@@ -1,0 +1,5 @@
+set -tmpdir "D:/dowload/xilin/ghidichtraiphai_phaitrai_SW_348/xst/projnav.tmp"
+set -xsthdpdir "D:/dowload/xilin/ghidichtraiphai_phaitrai_SW_348/xst"
+elaborate
+-ifn Shift_SIPO.prj
+-ifmt mixed

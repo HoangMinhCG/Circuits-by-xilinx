@@ -1,0 +1,8 @@
+verilog work "TFF.v"
+verilog work "taomode.v"
+verilog work "tao4xung.v"
+verilog work "Mux41.v"
+verilog work "chonmode.v"
+verilog work "topmodule.v"
+verilog work "test.v"
+verilog work "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

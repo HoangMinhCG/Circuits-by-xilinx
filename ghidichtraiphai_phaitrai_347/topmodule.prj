@@ -1,0 +1,3 @@
+verilog work "TFF.v"
+verilog work "Shift.v"
+verilog work "topmodule.v"
