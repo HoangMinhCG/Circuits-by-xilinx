@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/dem4bdb/demlen4b.xst" -ofn "D:/dowload/xilin/dem4bdb/demlen4b.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/dem4bdb/demlen4b.xst" -ofn "D:/dowload/xilin/dem4bdb/demlen4b.syr" 

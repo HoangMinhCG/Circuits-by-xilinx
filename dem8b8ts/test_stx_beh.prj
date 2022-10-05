@@ -1,0 +1,6 @@
+verilog isim_temp "mux8to1.v"
+verilog isim_temp "dem8bit.v"
+verilog isim_temp "chia8xung.v"
+verilog isim_temp "CounterUD.v"
+verilog isim_temp "test.v"
+verilog isim_temp "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

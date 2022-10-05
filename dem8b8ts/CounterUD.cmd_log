@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/dem8b8ts/CounterUD.xst" -ofn "D:/dowload/xilin/dem8b8ts/CounterUD.syr" 

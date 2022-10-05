@@ -1,0 +1,6 @@
+verilog work "mux8to1.v"
+verilog work "dem8bit.v"
+verilog work "chia8xung.v"
+verilog work "CounterUD.v"
+verilog work "test.v"
+verilog work "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,4 @@
+verilog work "mux8to1.v"
+verilog work "dem8bit.v"
+verilog work "chia8xung.v"
+verilog work "CounterUD.v"

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/dem4bdb/xung1hz.xst" -ofn "D:/dowload/xilin/dem4bdb/xung1hz.syr" 
