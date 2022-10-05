@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="machdem8bit.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Clock_div.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Clock_div.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Clock_div.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Clock_div.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Clock_div.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Clock_div.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Clock_div.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Clock_div.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Clock_div_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Clock_div_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Clock_div_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DEM.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DEM.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DEM.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="DEM.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DEM.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="DEM.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="DEM.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="DEM.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="DEM_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="DEM_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DEM_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="LED_COUNTER.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="LED_COUNTER.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="LED_COUNTER.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="LED_COUNTER.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="LED_COUNTER.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="LED_COUNTER.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="LED_COUNTER.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="LED_COUNTER.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="LED_COUNTER_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="LED_COUNTER_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1636984222" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1636984222">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636991206" xil_pn:in_ck="-2623727812472086896" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1636991206">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Clock_div.v"/>
+      <outfile xil_pn:name="CounterUD.v"/>
+      <outfile xil_pn:name="Dem.v"/>
+      <outfile xil_pn:name="Mux41.v"/>
+      <outfile xil_pn:name="test.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1636983928" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4846834790194202313" xil_pn:start_ts="1636983928">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636983928" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6686791627180713671" xil_pn:start_ts="1636983928">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636983928" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6967748408570602421" xil_pn:start_ts="1636983928">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636991206" xil_pn:in_ck="-2623727812472086896" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1636991206">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Clock_div.v"/>
+      <outfile xil_pn:name="CounterUD.v"/>
+      <outfile xil_pn:name="Dem.v"/>
+      <outfile xil_pn:name="Mux41.v"/>
+      <outfile xil_pn:name="test.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1636991208" xil_pn:in_ck="-2623727812472086896" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7967329535591404337" xil_pn:start_ts="1636991206">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="test_beh.prj"/>
+      <outfile xil_pn:name="test_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1636991208" xil_pn:in_ck="4140465173363612911" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7227570921926783150" xil_pn:start_ts="1636991208">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="test_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2191458863808996751" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6967748408570602421" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-1659736663633125491" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636987262" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7773789311730987647" xil_pn:start_ts="1636987262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636993547" xil_pn:in_ck="-6633684254527177140" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3808497136789068296" xil_pn:start_ts="1636993539">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Clock_div.ngr"/>
+      <outfile xil_pn:name="DEM.lso"/>
+      <outfile xil_pn:name="DEM.ngc"/>
+      <outfile xil_pn:name="DEM.ngr"/>
+      <outfile xil_pn:name="DEM.prj"/>
+      <outfile xil_pn:name="DEM.stx"/>
+      <outfile xil_pn:name="DEM.syr"/>
+      <outfile xil_pn:name="DEM.xst"/>
+      <outfile xil_pn:name="DEM_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
+
+</generated_project>

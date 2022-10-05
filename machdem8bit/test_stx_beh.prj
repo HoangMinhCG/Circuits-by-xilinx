@@ -1,0 +1,6 @@
+verilog isim_temp "Mux41.v"
+verilog isim_temp "CounterUD.v"
+verilog isim_temp "Clock_div.v"
+verilog isim_temp "Dem.v"
+verilog isim_temp "test.v"
+verilog isim_temp "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

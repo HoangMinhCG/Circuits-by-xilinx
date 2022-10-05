@@ -1,0 +1,485 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: LED_COUNTER.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LED_COUNTER.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LED_COUNTER"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : LED_COUNTER
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Mux41.v" in library work
+Compiling verilog file "CounterUD.v" in library work
+Module <Mux41> compiled
+Compiling verilog file "Clock_div.v" in library work
+Module <CounterUD> compiled
+Compiling verilog file "Dem.v" in library work
+Module <Clock_div> compiled
+Module <LED_COUNTER> compiled
+No errors in compilation
+Analysis of file <"LED_COUNTER.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <LED_COUNTER> in library <work>.
+
+Analyzing hierarchy for module <Clock_div> in library <work> with parameters.
+	M = "00011101110011010110010100000000"
+	N = "00000000000000000000000000011110"
+
+Analyzing hierarchy for module <Mux41> in library <work>.
+
+Analyzing hierarchy for module <CounterUD> in library <work> with parameters.
+	N = "00000000000000000000000000001000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <LED_COUNTER>.
+Module <LED_COUNTER> is correct for synthesis.
+ 
+Analyzing module <Clock_div> in library <work>.
+	M = 32'sb00011101110011010110010100000000
+	N = 32'sb00000000000000000000000000011110
+Module <Clock_div> is correct for synthesis.
+ 
+Analyzing module <Mux41> in library <work>.
+Module <Mux41> is correct for synthesis.
+ 
+Analyzing module <CounterUD> in library <work>.
+	N = 32'sb00000000000000000000000000001000
+Module <CounterUD> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Clock_div>.
+    Related source file is "Clock_div.v".
+    Found 30-bit comparator less for signal <q_0$cmp_lt0000> created at line 48.
+    Found 30-bit comparator less for signal <q_1$cmp_lt0000> created at line 47.
+    Found 30-bit comparator less for signal <q_2$cmp_lt0000> created at line 46.
+    Found 30-bit comparator less for signal <q_3$cmp_lt0000> created at line 45.
+    Found 30-bit adder for signal <r_next01H$addsub0000> created at line 41.
+    Found 30-bit adder for signal <r_next100H$addsub0000> created at line 44.
+    Found 30-bit adder for signal <r_next10H$addsub0000> created at line 43.
+    Found 30-bit adder for signal <r_next1H$addsub0000> created at line 42.
+    Found 30-bit register for signal <r_reg01H>.
+    Found 30-bit register for signal <r_reg100H>.
+    Found 30-bit register for signal <r_reg10H>.
+    Found 30-bit register for signal <r_reg1H>.
+    Summary:
+	inferred 120 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <Clock_div> synthesized.
+
+
+Synthesizing Unit <Mux41>.
+    Related source file is "Mux41.v".
+    Found 1-bit 4-to-1 multiplexer for signal <clk_o>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux41> synthesized.
+
+
+Synthesizing Unit <CounterUD>.
+    Related source file is "CounterUD.v".
+    Found 8-bit addsub for signal <r_next>.
+    Found 8-bit register for signal <r_reg>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <CounterUD> synthesized.
+
+
+Synthesizing Unit <LED_COUNTER>.
+    Related source file is "Dem.v".
+WARNING:Xst:653 - Signal <f> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+Unit <LED_COUNTER> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 30-bit adder                                          : 4
+ 8-bit addsub                                          : 1
+# Registers                                            : 5
+ 30-bit register                                       : 4
+ 8-bit register                                        : 1
+# Comparators                                          : 4
+ 30-bit comparator less                                : 4
+# Multiplexers                                         : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <clockdivider> is unconnected in block <LED_COUNTER>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 30-bit adder                                          : 4
+ 8-bit addsub                                          : 1
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Comparators                                          : 4
+ 30-bit comparator less                                : 4
+# Multiplexers                                         : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <LED_COUNTER> ...
+
+Optimizing unit <Clock_div> ...
+
+Optimizing unit <CounterUD> ...
+WARNING:Xst:1710 - FF/Latch <counter/r_reg_7> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_6> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_5> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_4> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_3> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_2> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_1> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <counter/r_reg_0> (without init value) has a constant value of 0 in block <LED_COUNTER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_29> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_28> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_27> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_26> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_25> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_24> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_23> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_22> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_21> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_20> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_19> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_18> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_17> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_16> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_15> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_14> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_13> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_12> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_11> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_10> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_9> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_8> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_7> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_6> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_5> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_4> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_3> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_2> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_1> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg100H_0> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_29> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_28> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_27> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_26> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_25> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_24> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_23> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_22> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_21> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_20> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_19> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_18> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_17> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_16> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_15> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_14> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_13> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_12> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_11> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_10> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_9> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_8> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_7> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_6> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_5> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_4> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_3> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_2> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_1> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg1H_0> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_29> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_28> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_27> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_26> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_25> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_24> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_23> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_22> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_21> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_20> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_19> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_18> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_17> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_16> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_15> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_14> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_13> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_12> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_11> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_10> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_9> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_8> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_7> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_6> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_5> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_4> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_3> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_2> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_1> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg01H_0> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_29> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_28> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_27> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_26> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_25> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_24> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_23> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_22> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_21> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_20> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_19> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_18> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_17> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_16> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_15> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_14> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_13> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_12> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_11> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_10> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_9> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_8> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_7> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_6> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_5> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_4> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_3> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_2> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_1> of sequential type is unconnected in block <LED_COUNTER>.
+WARNING:Xst:2677 - Node <clockdivider/r_reg10H_0> of sequential type is unconnected in block <LED_COUNTER>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LED_COUNTER, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : LED_COUNTER.ngr
+Top Level Output File Name         : LED_COUNTER
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        0  out of   4656     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                   8  out of    232     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.52 secs
+ 
+--> 
+
+Total memory usage is 4521948 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  132 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

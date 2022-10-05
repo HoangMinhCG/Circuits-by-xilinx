@@ -1,0 +1,5 @@
+verilog isim_temp "Shift_SIPO.v"
+verilog isim_temp "Clock_1Hz.v"
+verilog isim_temp "ShiftRegiter.v"
+verilog isim_temp "test.v"
+verilog isim_temp "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

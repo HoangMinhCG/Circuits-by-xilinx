@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/machtru4bit/Machtru1bit.xst" -ofn "D:/dowload/xilin/machtru4bit/Machtru1bit.syr" 

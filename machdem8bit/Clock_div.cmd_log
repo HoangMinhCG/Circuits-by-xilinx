@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/machdem8bit/Clock_div.xst" -ofn "D:/dowload/xilin/machdem8bit/Clock_div.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/machdem8bit/Clock_div.xst" -ofn "D:/dowload/xilin/machdem8bit/Clock_div.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/machdem8bit/Clock_div.xst" -ofn "D:/dowload/xilin/machdem8bit/Clock_div.syr" 

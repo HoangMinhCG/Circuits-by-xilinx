@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/machdemlen4bit/machdemlen4bit.xst" -ofn "D:/dowload/xilin/machdemlen4bit/machdemlen4bit.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/machdemlen4bit/machdemlen4bit.xst" -ofn "D:/dowload/xilin/machdemlen4bit/machdemlen4bit.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/machdemlen4bit/machdemlen4bit.xst" -ofn "D:/dowload/xilin/machdemlen4bit/machdemlen4bit.syr" 

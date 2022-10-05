@@ -1,0 +1,5 @@
+verilog work "taoxung.v"
+verilog work "nutnhan.v"
+verilog work "mux41.v"
+verilog work "machdem.v"
+verilog work "topmodule.v"

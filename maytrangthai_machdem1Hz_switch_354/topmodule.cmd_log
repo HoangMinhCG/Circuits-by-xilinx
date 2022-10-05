@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/maytrangthai_machdem1Hz_switch_354/topmodule.xst" -ofn "D:/dowload/xilin/maytrangthai_machdem1Hz_switch_354/topmodule.syr" 

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/machdem8bit/LED_COUNTER.xst" -ofn "D:/dowload/xilin/machdem8bit/LED_COUNTER.syr" 
