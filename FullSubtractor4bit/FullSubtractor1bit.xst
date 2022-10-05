@@ -1,0 +1,5 @@
+set -tmpdir "D:/dowload/xilin/FullSubtractor4bit/xst/projnav.tmp"
+set -xsthdpdir "D:/dowload/xilin/FullSubtractor4bit/xst"
+elaborate
+-ifn FullSubtractor1bit.prj
+-ifmt mixed

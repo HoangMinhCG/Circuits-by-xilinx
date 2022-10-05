@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/ghidich4bit_FFD_341/ShiftRegiter.xst" -ofn "D:/dowload/xilin/ghidich4bit_FFD_341/ShiftRegiter.syr" 

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/FullSubtractor4bit/FullSubtractor1bit.xst" -ofn "D:/dowload/xilin/FullSubtractor4bit/FullSubtractor1bit.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/FullSubtractor4bit/FullSubtractor1bit.xst" -ofn "D:/dowload/xilin/FullSubtractor4bit/FullSubtractor1bit.syr" 

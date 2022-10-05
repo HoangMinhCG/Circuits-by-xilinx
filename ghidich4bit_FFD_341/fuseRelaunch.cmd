@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/dowload/xilin/ghidich4bit_FFD_341/test_isim_beh.exe" -prj "D:/dowload/xilin/ghidich4bit_FFD_341/test_beh.prj" "work.test" "work.glbl" 

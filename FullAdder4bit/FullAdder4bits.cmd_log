@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/FullAdder4bit/FullAdder4bits.xst" -ofn "D:/dowload/xilin/FullAdder4bit/FullAdder4bits.syr" 

@@ -1,0 +1,4 @@
+verilog isim_temp "FullSubtractor1bit.v"
+verilog isim_temp "FullSubtractor4bits.v"
+verilog isim_temp "TEST.v"
+verilog isim_temp "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"
