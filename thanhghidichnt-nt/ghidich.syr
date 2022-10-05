@@ -1,0 +1,464 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ghidich.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ghidich.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ghidich"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : ghidich
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "taoxung.v" in library work
+Compiling verilog file "siso.v" in library work
+Module <taoxung> compiled
+Compiling verilog file "ghidich.v" in library work
+Module <siso> compiled
+Module <ghidich> compiled
+No errors in compilation
+Analysis of file <"ghidich.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ghidich> in library <work>.
+
+Analyzing hierarchy for module <taoxung> in library <work> with parameters.
+	M = "00000010111110101111000010000000"
+	N = "00000000000000000000000000011010"
+
+Analyzing hierarchy for module <siso> in library <work> with parameters.
+	N = "00000000000000000000000000000100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ghidich>.
+Module <ghidich> is correct for synthesis.
+ 
+Analyzing module <taoxung> in library <work>.
+	M = 32'sb00000010111110101111000010000000
+	N = 32'sb00000000000000000000000000011010
+Module <taoxung> is correct for synthesis.
+ 
+Analyzing module <siso> in library <work>.
+	N = 32'sb00000000000000000000000000000100
+Module <siso> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <taoxung>.
+    Related source file is "taoxung.v".
+    Found 26-bit comparator greater for signal <f$cmp_gt0000> created at line 37.
+    Found 26-bit adder for signal <r_next$addsub0000> created at line 35.
+    Found 27-bit comparator greatequal for signal <r_next$cmp_ge0000> created at line 35.
+    Found 26-bit register for signal <r_reg>.
+    Summary:
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <taoxung> synthesized.
+
+
+Synthesizing Unit <siso>.
+    Related source file is "siso.v".
+    Found 4-bit register for signal <r_reg>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <siso> synthesized.
+
+
+Synthesizing Unit <ghidich>.
+    Related source file is "ghidich.v".
+Unit <ghidich> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 2
+ 26-bit register                                       : 1
+ 4-bit register                                        : 1
+# Comparators                                          : 2
+ 26-bit comparator greater                             : 1
+ 27-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+# Comparators                                          : 2
+ 26-bit comparator greater                             : 1
+ 27-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ghidich> ...
+
+Optimizing unit <taoxung> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ghidich, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <ghidich> :
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <SISO/r_reg_0> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <ghidich> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ghidich.ngr
+Top Level Output File Name         : ghidich
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 152
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 33
+#      LUT2                        : 27
+#      LUT4                        : 7
+#      MUXCY                       : 48
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 30
+#      FDC                         : 30
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       42  out of   4656     0%  
+ Number of Slice Flip Flops:             30  out of   9312     0%  
+ Number of 4 input LUTs:                 76  out of   9312     0%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                                        | Clock buffer(FF name)  | Load  |
+------------------------------------------------------------------------------------+------------------------+-------+
+clockdivider/Mcompar_f_cmp_gt0000_cy<12>(clockdivider/Mcompar_f_cmp_gt0000_cy<12>:O)| NONE(*)(SISO/r_reg_3)  | 4     |
+clk                                                                                 | BUFGP                  | 26    |
+------------------------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 30    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.053ns (Maximum Frequency: 165.207MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockdivider/Mcompar_f_cmp_gt0000_cy<12>'
+  Clock period: 1.319ns (frequency: 758.150MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.319ns (Levels of Logic = 0)
+  Source:            SISO/r_reg_3 (FF)
+  Destination:       SISO/r_reg_2 (FF)
+  Source Clock:      clockdivider/Mcompar_f_cmp_gt0000_cy<12> falling
+  Destination Clock: clockdivider/Mcompar_f_cmp_gt0000_cy<12> falling
+
+  Data Path: SISO/r_reg_3 to SISO/r_reg_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.591   0.420  SISO/r_reg_3 (SISO/r_reg_3)
+     FDC:D                     0.308          SISO/r_reg_2
+    ----------------------------------------
+    Total                      1.319ns (0.899ns logic, 0.420ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.053ns (frequency: 165.207MHz)
+  Total number of paths / destination ports: 845 / 26
+-------------------------------------------------------------------------
+Delay:               6.053ns (Levels of Logic = 27)
+  Source:            clockdivider/r_reg_1 (FF)
+  Destination:       clockdivider/r_reg_25 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clockdivider/r_reg_1 to clockdivider/r_reg_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  clockdivider/r_reg_1 (clockdivider/r_reg_1)
+     LUT1:I0->O            1   0.704   0.000  clockdivider/Madd_r_next_addsub0000_cy<1>_rt (clockdivider/Madd_r_next_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  clockdivider/Madd_r_next_addsub0000_cy<1> (clockdivider/Madd_r_next_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<2> (clockdivider/Madd_r_next_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<3> (clockdivider/Madd_r_next_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<4> (clockdivider/Madd_r_next_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<5> (clockdivider/Madd_r_next_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<6> (clockdivider/Madd_r_next_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<7> (clockdivider/Madd_r_next_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<8> (clockdivider/Madd_r_next_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<9> (clockdivider/Madd_r_next_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<10> (clockdivider/Madd_r_next_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<11> (clockdivider/Madd_r_next_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<12> (clockdivider/Madd_r_next_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<13> (clockdivider/Madd_r_next_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<14> (clockdivider/Madd_r_next_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<15> (clockdivider/Madd_r_next_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<16> (clockdivider/Madd_r_next_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<17> (clockdivider/Madd_r_next_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<18> (clockdivider/Madd_r_next_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<19> (clockdivider/Madd_r_next_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<20> (clockdivider/Madd_r_next_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<21> (clockdivider/Madd_r_next_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<22> (clockdivider/Madd_r_next_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<23> (clockdivider/Madd_r_next_addsub0000_cy<23>)
+     MUXCY:CI->O           0   0.059   0.000  clockdivider/Madd_r_next_addsub0000_cy<24> (clockdivider/Madd_r_next_addsub0000_cy<24>)
+     XORCY:CI->O           1   0.804   0.499  clockdivider/Madd_r_next_addsub0000_xor<25> (clockdivider/r_next_addsub0000<25>)
+     LUT2:I1->O            1   0.704   0.000  clockdivider/r_next<25>1 (clockdivider/r_next<25>)
+     FDC:D                     0.308          clockdivider/r_reg_25
+    ----------------------------------------
+    Total                      6.053ns (4.932ns logic, 1.121ns route)
+                                       (81.5% logic, 18.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clockdivider/Mcompar_f_cmp_gt0000_cy<12>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            s_in (PAD)
+  Destination:       SISO/r_reg_3 (FF)
+  Destination Clock: clockdivider/Mcompar_f_cmp_gt0000_cy<12> falling
+
+  Data Path: s_in to SISO/r_reg_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  s_in_IBUF (s_in_IBUF)
+     FDC:D                     0.308          SISO/r_reg_3
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockdivider/Mcompar_f_cmp_gt0000_cy<12>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            SISO/r_reg_0 (FF)
+  Destination:       s_out (PAD)
+  Source Clock:      clockdivider/Mcompar_f_cmp_gt0000_cy<12> falling
+
+  Data Path: SISO/r_reg_0 to s_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.591   0.420  SISO/r_reg_0 (SISO/r_reg_0)
+     OBUF:I->O                 3.272          s_out_OBUF (s_out)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.13 secs
+ 
+--> 
+
+Total memory usage is 4521952 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
