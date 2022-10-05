@@ -1,0 +1,4 @@
+verilog work "demux1to4.v"
+verilog work "demux1to8by2demux1to4.v"
+verilog work "test.v"
+verilog work "D:/dowload/xilin/14.7/ISE_DS/ISE//verilog/src/glbl.v"

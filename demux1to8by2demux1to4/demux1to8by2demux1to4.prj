@@ -1,0 +1,2 @@
+verilog work "demux1to4.v"
+verilog work "demux1to8by2demux1to4.v"
