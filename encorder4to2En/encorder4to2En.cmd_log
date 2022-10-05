@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/encorder4to2En/encorder4to2En.xst" -ofn "D:/dowload/xilin/encorder4to2En/encorder4to2En.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/encorder4to2En/encorder4to2En.xst" -ofn "D:/dowload/xilin/encorder4to2En/encorder4to2En.syr" 

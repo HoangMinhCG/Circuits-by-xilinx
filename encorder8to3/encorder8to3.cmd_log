@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/encorder8to3/encorder8to3.xst" -ofn "D:/dowload/xilin/encorder8to3/encorder8to3.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/encorder8to3/encorder8to3.xst" -ofn "D:/dowload/xilin/encorder8to3/encorder8to3.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/encorder8to3/encorder8to3.xst" -ofn "D:/dowload/xilin/encorder8to3/encorder8to3.syr" 
+xst -intstyle ise -ifn "D:/dowload/xilin/encorder8to3/encorder8to3.xst" -ofn "D:/dowload/xilin/encorder8to3/encorder8to3.syr" 

@@ -1,0 +1,2 @@
+verilog work "Encoder4to2.v"
+verilog work "Encoder8to3by2Encoder4to2.v"
