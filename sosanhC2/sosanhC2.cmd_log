@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/sosanhC2/sosanhC2.xst" -ofn "D:/dowload/xilin/sosanhC2/sosanhC2.syr" 

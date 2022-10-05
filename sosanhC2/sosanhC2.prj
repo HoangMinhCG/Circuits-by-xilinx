@@ -1,0 +1,3 @@
+verilog work "FullSubtracter1bit.v"
+verilog work "FullSubtracter4bits.v"
+verilog work "sosanhC2.v"
