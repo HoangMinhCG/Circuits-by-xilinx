@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/dowload/xilin/Decorder2to4_ES/Decoder2to4_ES.xst" -ofn "D:/dowload/xilin/Decorder2to4_ES/Decoder2to4_ES.syr" 
